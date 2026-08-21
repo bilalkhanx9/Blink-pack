@@ -1,42 +1,59 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './AboutBanner.css';
 
 export default function AboutBanner() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef(null);
+
+  const handlePlay = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    }
+  };
+
+  const handleVideoPause = () => {
+    setIsPlaying(false);
+  };
+
+  const handleVideoPlay = () => {
+    setIsPlaying(true);
+  };
 
   return (
     <div className="about-banner-card">
-      {/* Left Column: Video Player / Thumbnail */}
+      {/* Left Column: Real Video Player with Direct Frame Preview */}
       <div className="about-media-wrapper">
-        {isPlaying ? (
-          <video 
-            controls 
-            autoPlay 
-            playsInline
-            poster="/about-video-thumb.png"
-            className="about-video-player"
-          >
-            <source src="/main_page_boxes/video-2.webm" type="video/webm" />
-            Your browser does not support the video tag.
-          </video>
-        ) : (
+        <video 
+          ref={videoRef}
+          controls={isPlaying}
+          playsInline
+          preload="metadata"
+          onPlay={handleVideoPlay}
+          onPause={handleVideoPause}
+          onEnded={handleVideoPause}
+          className="about-video-player"
+          onClick={isPlaying ? undefined : handlePlay}
+        >
+          <source src="/main_page_boxes/video-2.webm#t=0.001" type="video/webm" />
+          <source src="/main_page_boxes/video-2.webm" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Circular Play Button Overlay (visible when video is not playing) */}
+        {!isPlaying && (
           <div 
-            className="about-thumb-container" 
-            onClick={() => setIsPlaying(true)}
+            className="about-play-overlay" 
+            onClick={handlePlay}
             role="button"
             tabIndex={0}
-            aria-label="Play About Video"
+            aria-label="Play video"
             onKeyDown={(e) => {
               if (e.key === 'Enter' || e.key === ' ') {
-                setIsPlaying(true);
+                handlePlay();
               }
             }}
           >
-            <img 
-              src="/about-video-thumb.png" 
-              alt="Blink Custom Packaging - Crafting Bespoke Boxes" 
-              className="about-thumb-image"
-            />
             <button className="play-button-overlay" aria-label="Play About Video" tabIndex={-1}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <polygon points="8 5 19 12 8 19 8 5" fill="#3F5D3D" />
