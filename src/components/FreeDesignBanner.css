@@ -1,0 +1,142 @@
+/* ==========================================================================
+   How It Works / Free Design Banner (2-Column Forest Green Section)
+   ========================================================================== */
+
+.free-design-section {
+  width: 100%;
+  background-color: #243828;
+  padding: clamp(64px, 8.5vh, 100px) 0;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Fraunces', Georgia, serif;
+}
+
+.free-design-container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 64px;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: clamp(40px, 6vw, 80px);
+}
+
+/* --------------------------------------------------------------------------
+   Left Column (Eyebrow with Gold Line & Large Display Headline)
+   -------------------------------------------------------------------------- */
+.free-design-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.free-design-eyebrow-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.free-design-eyebrow-line {
+  width: 24px;
+  height: 1.5px;
+  background-color: #C89D66;
+  display: inline-block;
+}
+
+.free-design-eyebrow {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #C89D66;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.free-design-title {
+  font-size: clamp(34px, 3.8vw, 48px);
+  font-weight: 600;
+  line-height: 1.15;
+  color: #FAF8F5;
+  letter-spacing: -0.015em;
+}
+
+.italic-free {
+  font-style: italic;
+  font-weight: 500;
+  color: #C89D66;
+}
+
+/* --------------------------------------------------------------------------
+   Right Column (Description & CTA Button)
+   -------------------------------------------------------------------------- */
+.free-design-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.free-design-description {
+  font-size: clamp(14px, 1.05vw, 15px);
+  line-height: 1.65;
+  color: #D6D2C4;
+  max-width: 480px;
+  margin-bottom: 26px;
+}
+
+.free-design-cta {
+  display: flex;
+  align-items: center;
+}
+
+.btn-free-concept {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FAF8F5;
+  color: #202F22;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.btn-free-concept:hover {
+  background-color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.btn-free-concept:active {
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Media Queries
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .free-design-container {
+    padding: 0 24px;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .free-design-section {
+    padding: 48px 0;
+  }
+
+  .free-design-title {
+    font-size: 30px;
+  }
+
+  .free-design-description {
+    max-width: 100%;
+  }
+
+  .btn-free-concept {
+    width: 100%;
+    max-width: 320px;
+  }
+}

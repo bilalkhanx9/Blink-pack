@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fraunces', Georgia, serif;
+}
+
+:root {
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'Fraunces', Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  background-color: #FAF7F2;
+  color: #2B2A24;
+  font-family: 'Fraunces', Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+button, input, select, textarea, a, p, span, h1, h2, h3, h4, h5, h6, label, em, strong {
+  font-family: 'Fraunces', Georgia, serif;
+}
+
+.app-layout {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #FAF7F2;
+  font-family: 'Fraunces', Georgia, serif;
+}
+
+/* ==========================================================================
+   Smooth Scroll Reveal & Entrance Animations
+   ========================================================================== */
+
+/* Single Element Reveal from Bottom */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Subtle Fade In */
+.reveal-fade {
+  opacity: 0;
+  transition: opacity 0.85s ease;
+  will-change: opacity;
+}
+
+.reveal-fade.is-visible {
+  opacity: 1;
+}
+
+/* Staggered Children Animations (Grids, Steps, Lists) */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-stagger.is-visible > *:nth-child(1) {
+  transition-delay: 0.05s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger.is-visible > *:nth-child(2) {
+  transition-delay: 0.15s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger.is-visible > *:nth-child(3) {
+  transition-delay: 0.25s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger.is-visible > *:nth-child(4) {
+  transition-delay: 0.35s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger.is-visible > *:nth-child(5) {
+  transition-delay: 0.45s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger.is-visible > *:nth-child(6) {
+  transition-delay: 0.55s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger.is-visible > *:nth-child(n+7) {
+  transition-delay: 0.65s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delay Modifier Utilities */
+.delay-100 { transition-delay: 0.1s !important; }
+.delay-200 { transition-delay: 0.2s !important; }
+.delay-300 { transition-delay: 0.3s !important; }
+.delay-400 { transition-delay: 0.4s !important; }

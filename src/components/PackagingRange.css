@@ -1,0 +1,228 @@
+/* ==========================================================================
+   Packaging Range Section & 6-Box Grid Styling
+   ========================================================================== */
+
+.range-section {
+  width: 100%;
+  background-color: #FAF7F2;
+  padding: clamp(56px, 8vh, 88px) 0 clamp(56px, 8vh, 88px);
+  position: relative;
+  font-family: 'Fraunces', Georgia, serif;
+}
+
+.range-container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+/* Header */
+.range-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto clamp(48px, 6.5vh, 64px);
+}
+
+.range-eyebrow {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #647558;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.range-title {
+  font-size: clamp(24px, 2.6vw, 32px);
+  font-weight: 500;
+  line-height: 1.25;
+  color: #1E232A;
+  letter-spacing: -0.01em;
+}
+
+/* 6-Card Grid (Matching Screenshot) */
+.range-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 2.8vw, 32px);
+  width: 100%;
+}
+
+/* Card - Clean Frameless Photo Container */
+.range-card {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.25s ease;
+}
+
+.range-card:focus-visible {
+  outline: 2px solid #3F5D3D;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Product Photo Box */
+.card-image-wrapper {
+  width: 100%;
+  aspect-ratio: 1.14;
+  background-color: #EAE5DE;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+}
+
+.card-image-default {
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+}
+
+.card-image-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.range-card:hover .card-image-default {
+  opacity: 0;
+  transform: scale(1.04);
+}
+
+.range-card:hover .card-image-hover {
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+/* --------------------------------------------------------------------------
+   Card Label Area with Smooth Hover Title-to-Explore Transition
+   -------------------------------------------------------------------------- */
+.card-info {
+  position: relative;
+  text-align: center;
+  padding-top: 14px;
+  min-height: 52px;
+  overflow: hidden;
+}
+
+/* Default State */
+.card-label-default {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.card-title {
+  font-size: 16.5px;
+  font-weight: 600;
+  color: #1E232A;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.card-subtitle {
+  font-size: 13px;
+  color: #787466;
+  line-height: 1.35;
+  margin-top: 3px;
+}
+
+/* Hover State (Explore with Arrow) */
+.card-label-hover {
+  position: absolute;
+  top: 18px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+
+.explore-label {
+  font-size: 16.5px;
+  font-weight: 600;
+  color: #3F5D3D;
+  letter-spacing: -0.01em;
+}
+
+.explore-arrow {
+  font-size: 18px;
+  color: #3F5D3D;
+  transition: transform 0.2s ease;
+  line-height: 1;
+}
+
+/* Trigger on Card Hover */
+.range-card:hover .card-label-default {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.range-card:hover .card-label-hover {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.range-card:hover .explore-arrow {
+  transform: translateX(4px);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Media Queries
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .range-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 900px) {
+  .range-container {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .range-section {
+    padding: 24px 0 48px;
+  }
+
+  .range-container {
+    padding: 0 18px;
+  }
+
+  .range-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .range-title {
+    font-size: 22px;
+  }
+}

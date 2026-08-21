@@ -1,0 +1,191 @@
+/* ==========================================================================
+   Our Process Section Styling
+   ========================================================================== */
+
+.process-section {
+  width: 100%;
+  background-color: #FAF7F2;
+  padding: clamp(56px, 8vh, 88px) 0 clamp(64px, 9vh, 96px);
+  position: relative;
+}
+
+.process-container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+/* --------------------------------------------------------------------------
+   Header (Left Aligned)
+   -------------------------------------------------------------------------- */
+.process-header {
+  text-align: left;
+  max-width: 680px;
+  margin: 0 0 clamp(38px, 5.5vh, 56px) 0;
+}
+
+.process-eyebrow-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.process-eyebrow-line {
+  width: 22px;
+  height: 1.2px;
+  background-color: rgba(43, 42, 36, 0.28);
+  display: inline-block;
+}
+
+.process-eyebrow {
+  display: inline-block;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #586B4F;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.process-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(28px, 3.2vw, 38px);
+  font-weight: 600;
+  line-height: 1.18;
+  color: #1E232A;
+  letter-spacing: -0.015em;
+  margin-bottom: 12px;
+}
+
+.process-subtitle {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(13px, 1.05vw, 14.5px);
+  color: #6C685C;
+  line-height: 1.55;
+  max-width: 580px;
+}
+
+/* --------------------------------------------------------------------------
+   4-Step Horizontal Timeline
+   -------------------------------------------------------------------------- */
+.process-timeline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.process-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  flex: 1;
+  max-width: 250px;
+}
+
+/* Step Circular Icon Badge */
+.step-icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #E8ECE1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.process-step:hover .step-icon-circle {
+  transform: scale(1.06);
+  background-color: #DFE5D6;
+}
+
+/* Step Content */
+.step-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.step-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1E232A;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.step-num {
+  color: #1E232A;
+  font-weight: 700;
+}
+
+.step-description {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #6C685C;
+}
+
+/* Connecting Dashed Line between steps */
+.process-connector {
+  flex: 0 1 44px;
+  height: 1px;
+  border-top: 1.5px dashed rgba(43, 42, 36, 0.18);
+  margin-top: 24px;
+  align-self: flex-start;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Media Queries
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .process-timeline {
+    flex-wrap: wrap;
+    gap: 32px 24px;
+    justify-content: flex-start;
+  }
+
+  .process-step {
+    max-width: calc(50% - 24px);
+    flex: 1 1 calc(50% - 24px);
+  }
+
+  .process-connector {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .process-container {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .process-section {
+    padding: 44px 0 56px;
+  }
+
+  .process-container {
+    padding: 0 20px;
+  }
+
+  .process-timeline {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .process-step {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .process-title {
+    font-size: 23px;
+  }
+}
