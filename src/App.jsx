@@ -7,6 +7,7 @@ import FreeDesignBanner from './components/FreeDesignBanner';
 import ProcessSection from './components/ProcessSection';
 import StandardSection from './components/StandardSection';
 import CallToActionBanner from './components/CallToActionBanner';
+import Footer from './components/Footer';
 import PackagingDetailPage from './components/PackagingDetailPage';
 import { packagingTypes, getPackagingTypeById } from './data/packagingData';
 import { useScrollReveal } from './hooks/useScrollReveal';
@@ -78,6 +79,8 @@ export default function App() {
           <CallToActionBanner />
         </>
       )}
+
+      <Footer onNavigateHome={handleNavigateHome} onSelectType={handleSelectType} />
     </div>
   );
 }
