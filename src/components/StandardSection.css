@@ -1,0 +1,178 @@
+/* ==========================================================================
+   The Standard Section Styling
+   ========================================================================== */
+
+.standard-section {
+  width: 100%;
+  background-color: #FAF7F2;
+  padding: clamp(64px, 9vh, 104px) 0 clamp(72px, 10vh, 112px);
+  position: relative;
+  font-family: 'Fraunces', Georgia, serif;
+}
+
+.standard-container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+/* --------------------------------------------------------------------------
+   Header
+   -------------------------------------------------------------------------- */
+.standard-header {
+  text-align: left;
+  max-width: 860px;
+  margin-bottom: clamp(40px, 6vh, 56px);
+}
+
+.standard-eyebrow-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.standard-eyebrow-line {
+  width: 22px;
+  height: 1.5px;
+  background-color: #5D7154;
+  display: inline-block;
+}
+
+.standard-eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #5D7154;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.standard-title {
+  font-size: clamp(28px, 3.2vw, 44px);
+  font-weight: 600;
+  line-height: 1.22;
+  color: #1E232A;
+  letter-spacing: -0.015em;
+  margin-bottom: 16px;
+}
+
+.title-break {
+  display: inline;
+}
+
+.standard-description {
+  font-size: clamp(14px, 1.1vw, 16px);
+  line-height: 1.6;
+  color: #6C685C;
+  max-width: 620px;
+}
+
+/* --------------------------------------------------------------------------
+   4-Card Principles Grid with Clean Border Structure
+   -------------------------------------------------------------------------- */
+.standard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid rgba(43, 42, 36, 0.14);
+  background-color: transparent;
+  width: 100%;
+}
+
+.standard-card {
+  padding: clamp(28px, 3vw, 40px) clamp(22px, 2.2vw, 32px);
+  border-right: 1px solid rgba(43, 42, 36, 0.14);
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.standard-card:last-child {
+  border-right: none;
+}
+
+.standard-card:hover {
+  background-color: rgba(255, 255, 255, 0.55);
+}
+
+.standard-numeral {
+  font-style: italic;
+  font-size: 17px;
+  font-weight: 600;
+  color: #5D7154;
+  margin-bottom: 24px;
+  display: block;
+}
+
+.standard-card-title {
+  font-size: 16.5px;
+  font-weight: 700;
+  color: #1E232A;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+}
+
+.standard-card-desc {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #6C685C;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Media Queries
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .standard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .standard-card {
+    border-right: 1px solid rgba(43, 42, 36, 0.14);
+    border-bottom: 1px solid rgba(43, 42, 36, 0.14);
+  }
+
+  .standard-card:nth-child(2n) {
+    border-right: none;
+  }
+
+  .standard-card:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .standard-container {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .standard-section {
+    padding: 48px 0 64px;
+  }
+
+  .standard-container {
+    padding: 0 18px;
+  }
+
+  .title-break {
+    display: none;
+  }
+
+  .standard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .standard-card {
+    border-right: none;
+    border-bottom: 1px solid rgba(43, 42, 36, 0.14);
+  }
+
+  .standard-card:last-child {
+    border-bottom: none;
+  }
+}

@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import PackagingRange from './components/PackagingRange';
 import FreeDesignBanner from './components/FreeDesignBanner';
 import ProcessSection from './components/ProcessSection';
+import StandardSection from './components/StandardSection';
 import PackagingDetailPage from './components/PackagingDetailPage';
 import { packagingTypes, getPackagingTypeById } from './data/packagingData';
 import { useScrollReveal } from './hooks/useScrollReveal';
@@ -71,6 +72,7 @@ export default function App() {
           <FreeDesignBanner />
           <PackagingRange onSelectType={handleSelectType} />
           <ProcessSection />
+          <StandardSection />
         </>
       )}
     </div>
