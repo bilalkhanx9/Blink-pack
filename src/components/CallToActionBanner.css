@@ -1,0 +1,126 @@
+/* ==========================================================================
+   Begin With One Box - CTA Banner Section
+   ========================================================================== */
+
+.cta-banner-section {
+  width: 100%;
+  background-color: #354D33;
+  padding: clamp(72px, 11vh, 120px) 0 clamp(72px, 11vh, 120px);
+  position: relative;
+  font-family: 'Fraunces', Georgia, serif;
+}
+
+.cta-banner-container {
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   Headline & Typography
+   -------------------------------------------------------------------------- */
+.cta-banner-title {
+  font-size: clamp(34px, 4.2vw, 54px);
+  font-weight: 600;
+  line-height: 1.15;
+  color: #FFFFFF;
+  letter-spacing: -0.015em;
+  margin: 0 auto 18px;
+}
+
+.cta-italic-accent {
+  font-style: italic;
+  font-weight: 500;
+  color: #C8A265;
+}
+
+.cta-banner-description {
+  font-size: clamp(14.5px, 1.15vw, 16.5px);
+  line-height: 1.65;
+  color: #E2E8DF;
+  max-width: 580px;
+  margin: 0 auto clamp(32px, 4.5vh, 42px);
+}
+
+/* --------------------------------------------------------------------------
+   Action Buttons
+   -------------------------------------------------------------------------- */
+.cta-banner-actions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F4EFE6;
+  color: #1E232A;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 14.5px;
+  font-weight: 600;
+  padding: 13px 30px;
+  border-radius: 3px;
+  text-decoration: none;
+  border: 1px solid #F4EFE6;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
+}
+
+.btn-cta-primary:hover {
+  background-color: #FFFFFF;
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+}
+
+.btn-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #F4EFE6;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 14.5px;
+  font-weight: 600;
+  padding: 13px 30px;
+  border-radius: 3px;
+  text-decoration: none;
+  border: 1px solid rgba(244, 239, 230, 0.38);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-cta-secondary:hover {
+  background-color: rgba(244, 239, 230, 0.08);
+  border-color: rgba(244, 239, 230, 0.75);
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Media Queries
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .cta-banner-section {
+    padding: 56px 0 64px;
+  }
+
+  .cta-banner-container {
+    padding: 0 20px;
+  }
+
+  .cta-banner-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .btn-cta-primary,
+  .btn-cta-secondary {
+    width: 100%;
+  }
+}

@@ -6,6 +6,7 @@ import PackagingRange from './components/PackagingRange';
 import FreeDesignBanner from './components/FreeDesignBanner';
 import ProcessSection from './components/ProcessSection';
 import StandardSection from './components/StandardSection';
+import CallToActionBanner from './components/CallToActionBanner';
 import PackagingDetailPage from './components/PackagingDetailPage';
 import { packagingTypes, getPackagingTypeById } from './data/packagingData';
 import { useScrollReveal } from './hooks/useScrollReveal';
@@ -64,6 +65,7 @@ export default function App() {
             onSelectType={handleSelectType}
           />
           <FreeDesignBanner />
+          <CallToActionBanner />
         </>
       ) : (
         /* Home Page View */
@@ -73,6 +75,7 @@ export default function App() {
           <PackagingRange onSelectType={handleSelectType} />
           <ProcessSection />
           <StandardSection />
+          <CallToActionBanner />
         </>
       )}
     </div>
