@@ -132,9 +132,9 @@ export default function Footer({ onNavigateHome, onSelectType }) {
           <p className="footer-copyright">
             © 2026 Blink Custom Packaging. All rights reserved.
           </p>
-          <a href="#private-client" className="footer-client-program">
-            Private Client Program
-          </a>
+          <span className="footer-credit">
+            @ inovex system
+          </span>
         </div>
 
       </div>
