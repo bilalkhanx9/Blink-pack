@@ -6,9 +6,9 @@ export const packagingTypes = [
     eyebrow: 'PACKAGING TYPE',
     description: 'A sturdy box made from corrugated (layered/fluted) cardboard, ideal for shipping, subscription boxes, and premium unboxing.',
     cardDescription: 'Shipping & subscription boxes',
-    image: '/MailerBox/1.webp',
-    cardImage: '/MailerBox/1.webp',
-    cardHoverImage: '/MailerBox/2.webp',
+    image: '/main_page_boxes/mailerbox-1.webp',
+    cardImage: '/main_page_boxes/mailerbox-1.webp',
+    cardHoverImage: '/main_page_boxes/mailerbox-2.webp',
     features: [
       { id: 'durable', label: 'High Durability', icon: 'shield' },
       { id: 'eco', label: '100% Recyclable', icon: 'leaf' },

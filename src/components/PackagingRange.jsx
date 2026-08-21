@@ -6,8 +6,8 @@ const packagingItems = [
     id: 'corrugated',
     title: 'Corrugate / Mailer',
     subtitle: 'Shipping & subscription boxes',
-    image: '/MailerBox/1.webp',
-    hoverImage: '/MailerBox/2.webp'
+    image: '/main_page_boxes/mailerbox-1.webp',
+    hoverImage: '/main_page_boxes/mailerbox-2.webp'
   },
   {
     id: 'tuck',
