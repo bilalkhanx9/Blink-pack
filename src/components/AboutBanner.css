@@ -18,7 +18,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   Left Column (Video Player & Direct Frame Preview)
+   Left Column (Continuous Looping Video Player)
    -------------------------------------------------------------------------- */
 .about-media-wrapper {
   position: relative;
@@ -41,52 +41,6 @@
   display: block;
   background-color: #1A1D20;
   border-radius: 8px;
-  cursor: pointer;
-}
-
-/* Overlay covering the video with play button until played */
-.about-play-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  background: rgba(0, 0, 0, 0.04);
-  transition: background 0.25s ease;
-  z-index: 2;
-}
-
-.about-play-overlay:hover {
-  background: rgba(0, 0, 0, 0.12);
-}
-
-/* Circular Play Button Overlay */
-.play-button-overlay {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background-color: #FFFFFF;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 3px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.22);
-  cursor: pointer;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, background-color 0.2s ease;
-  pointer-events: none;
-}
-
-.about-play-overlay:hover .play-button-overlay {
-  transform: scale(1.1);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
-  background-color: #FAFDF9;
 }
 
 /* --------------------------------------------------------------------------

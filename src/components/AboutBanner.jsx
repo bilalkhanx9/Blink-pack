@@ -1,66 +1,34 @@
-import React, { useState, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './AboutBanner.css';
 
 export default function AboutBanner() {
-  const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
 
-  const handlePlay = () => {
+  useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.play();
-      setIsPlaying(true);
+      videoRef.current.muted = true;
+      videoRef.current.play().catch((err) => {
+        console.log('Video autoplay:', err);
+      });
     }
-  };
-
-  const handleVideoPause = () => {
-    setIsPlaying(false);
-  };
-
-  const handleVideoPlay = () => {
-    setIsPlaying(true);
-  };
+  }, []);
 
   return (
     <div className="about-banner-card">
-      {/* Left Column: Real Video Player with Direct Frame Preview */}
+      {/* Left Column: Continuous Auto-Looping Video */}
       <div className="about-media-wrapper">
         <video 
           ref={videoRef}
-          controls={isPlaying}
+          autoPlay 
+          loop 
+          muted 
           playsInline
-          preload="metadata"
-          onPlay={handleVideoPlay}
-          onPause={handleVideoPause}
-          onEnded={handleVideoPause}
+          preload="auto"
           className="about-video-player"
-          onClick={isPlaying ? undefined : handlePlay}
         >
-          <source src="/main_page_boxes/video-2.webm#t=0.001" type="video/webm" />
           <source src="/main_page_boxes/video-2.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
-
-        {/* Circular Play Button Overlay (visible when video is not playing) */}
-        {!isPlaying && (
-          <div 
-            className="about-play-overlay" 
-            onClick={handlePlay}
-            role="button"
-            tabIndex={0}
-            aria-label="Play video"
-            onKeyDown={(e) => {
-              if (e.key === 'Enter' || e.key === ' ') {
-                handlePlay();
-              }
-            }}
-          >
-            <button className="play-button-overlay" aria-label="Play About Video" tabIndex={-1}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <polygon points="8 5 19 12 8 19 8 5" fill="#3F5D3D" />
-              </svg>
-            </button>
-          </div>
-        )}
       </div>
 
       {/* Right Column: Text Content & CTA */}
