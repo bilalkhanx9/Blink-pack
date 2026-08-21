@@ -10,21 +10,34 @@ export default function AboutBanner() {
       <div className="about-media-wrapper">
         {isPlaying ? (
           <video 
-            src="/about-video.mp4" 
             controls 
             autoPlay 
+            playsInline
+            poster="/about-video-thumb.png"
             className="about-video-player"
           >
+            <source src="/main_page_boxes/video-2.webm" type="video/webm" />
             Your browser does not support the video tag.
           </video>
         ) : (
-          <div className="about-thumb-container" onClick={() => setIsPlaying(true)}>
+          <div 
+            className="about-thumb-container" 
+            onClick={() => setIsPlaying(true)}
+            role="button"
+            tabIndex={0}
+            aria-label="Play About Video"
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                setIsPlaying(true);
+              }
+            }}
+          >
             <img 
               src="/about-video-thumb.png" 
               alt="Blink Custom Packaging - Crafting Bespoke Boxes" 
               className="about-thumb-image"
             />
-            <button className="play-button-overlay" aria-label="Play About Video">
+            <button className="play-button-overlay" aria-label="Play About Video" tabIndex={-1}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <polygon points="8 5 19 12 8 19 8 5" fill="#3F5D3D" />
               </svg>
