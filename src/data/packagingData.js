@@ -92,6 +92,7 @@ export const packagingTypes = [
         ],
         thumb: '/Die-Cut/Corrugated.webp',
         mainImage: '/Die-Cut/Corrugated.webp',
+        video: '/boxes-videos/Mailerbox/Diecut.webm',
         gallery: [
           { image: '/Die-Cut/Corrugated.webp', name: 'Corrugated' },
           { image: '/Die-Cut/Hydrophobic.webp', name: 'Hydrophobic' },
