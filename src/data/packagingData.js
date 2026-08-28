@@ -140,13 +140,13 @@ export const packagingTypes = [
         title: 'Straight Tuck End (STE)',
         shortTitle: '1. Straight Tuck End (STE)',
         description: 'Both top and bottom flaps tuck in the same direction from front to back, leaving a completely seamless, smooth front display face.',
-        thumb: '/subtype-ste-thumb.png',
-        mainImage: '/subtype-ste-main.png',
+        thumb: '/subtype-ste-new.jpg',
+        mainImage: '/subtype-ste-new.jpg',
         video: '/boxes-videos/StraightTuckEnd.webm',
         gallery: [
-          '/subtype-ste-main.png',
-          '/subtype-rte-thumb.png',
-          '/subtype-autolock-thumb.png'
+          '/subtype-ste-new.jpg',
+          '/subtype-rte-new.jpg',
+          '/subtype-autolock-new.jpg'
         ],
         bestFor: [
           { icon: '🧴', label: 'Cosmetics & Skincare' },
@@ -169,13 +169,13 @@ export const packagingTypes = [
         title: 'Reverse Tuck End (RTE)',
         shortTitle: '2. Reverse Tuck End (RTE)',
         description: 'Top and bottom flaps tuck in opposite directions. The interlocking sheet layout makes RTE our most cost-effective and economical folding carton style.',
-        thumb: '/subtype-rte-thumb.png',
-        mainImage: '/subtype-rte-thumb.png',
+        thumb: '/subtype-rte-new.jpg',
+        mainImage: '/subtype-rte-new.jpg',
         video: '/boxes-videos/ReverseTuckEnd.webm',
         gallery: [
-          '/subtype-rte-thumb.png',
-          '/subtype-ste-main.png',
-          '/subtype-autolock-thumb.png'
+          '/subtype-rte-new.jpg',
+          '/subtype-ste-new.jpg',
+          '/subtype-autolock-new.jpg'
         ],
         bestFor: [
           { icon: '💊', label: 'Pharma & Vitamin Cartons' },
@@ -198,13 +198,13 @@ export const packagingTypes = [
         title: 'Auto-Lock Bottom Tuck',
         shortTitle: '3. Auto-Lock Bottom Tuck',
         description: 'Features a pre-glued bottom that pops open and locks into place automatically upon unfolding, providing superior strength for heavier retail items.',
-        thumb: '/subtype-autolock-thumb.png',
-        mainImage: '/subtype-autolock-thumb.png',
+        thumb: '/subtype-autolock-new.jpg',
+        mainImage: '/subtype-autolock-new.jpg',
         video: '/boxes-videos/AutoLockbottom.webm',
         gallery: [
-          '/subtype-autolock-thumb.png',
-          '/subtype-ste-main.png',
-          '/subtype-rte-thumb.png'
+          '/subtype-autolock-new.jpg',
+          '/subtype-ste-new.jpg',
+          '/subtype-rte-new.jpg'
         ],
         bestFor: [
           { icon: '🍷', label: 'Heavy Glass Bottles & Jars' },

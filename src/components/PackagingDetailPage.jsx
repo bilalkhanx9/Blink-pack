@@ -237,12 +237,12 @@ export default function PackagingDetailPage({ packagingType, onNavigateHome, onS
                   <video 
                     key={activeSubType.video}
                     src={activeSubType.video} 
-                    poster={activeSubType.mainImage || activeSubType.thumb}
                     className="subtype-main-video"
                     autoPlay 
                     loop 
                     muted 
                     playsInline
+                    preload="auto"
                   />
                 ) : (
                   <img 
