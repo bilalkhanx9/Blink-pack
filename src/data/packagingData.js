@@ -24,6 +24,7 @@ export const packagingTypes = [
         description: 'Folds and locks securely without requiring packing tape. Features double-wall sides and front dust flaps for a pristine, clean e-commerce presentation.',
         thumb: '/MailerBox/main.webp',
         mainImage: '/MailerBox/main.webp',
+        video: '/boxes-videos/Mailerbox/selflocking.webm',
         gallery: [
           { image: '/MailerBox/main.webp', name: 'Standard Kraft' },
           { image: '/MailerBox/1.webp', name: 'Open Front' },
@@ -55,6 +56,7 @@ export const packagingTypes = [
         description: 'Standard shipping box with all flaps having the same length, meeting at the center. The most widely used and cost-effective shipping carton in the world.',
         thumb: '/Corrugate/Corrugate-Main-1.webp',
         mainImage: '/Corrugate/Corrugate-Main-1.webp',
+        video: '/boxes-videos/Mailerbox/RCS.webm',
         gallery: [
           { image: '/Corrugate/Corrugate-Main-1.webp', name: 'Standard RSC' },
           { image: '/MailerBox/main.webp', name: 'Standard Kraft' },
@@ -142,7 +144,7 @@ export const packagingTypes = [
         description: 'Both top and bottom flaps tuck in the same direction from front to back, leaving a completely seamless, smooth front display face.',
         thumb: '/subtype-ste-new.jpg',
         mainImage: '/subtype-ste-new.jpg',
-        video: '/boxes-videos/StraightTuckEnd.webm',
+        video: '/boxes-videos/Tuckbox/StraightTuckEnd.webm',
         gallery: [
           '/subtype-ste-new.jpg',
           '/subtype-rte-new.jpg',
@@ -171,7 +173,7 @@ export const packagingTypes = [
         description: 'Top and bottom flaps tuck in opposite directions. The interlocking sheet layout makes RTE our most cost-effective and economical folding carton style.',
         thumb: '/subtype-rte-new.jpg',
         mainImage: '/subtype-rte-new.jpg',
-        video: '/boxes-videos/ReverseTuckEnd.webm',
+        video: '/boxes-videos/Tuckbox/ReverseTuckEnd.webm',
         gallery: [
           '/subtype-rte-new.jpg',
           '/subtype-ste-new.jpg',
@@ -200,7 +202,7 @@ export const packagingTypes = [
         description: 'Features a pre-glued bottom that pops open and locks into place automatically upon unfolding, providing superior strength for heavier retail items.',
         thumb: '/subtype-autolock-new.jpg',
         mainImage: '/subtype-autolock-new.jpg',
-        video: '/boxes-videos/AutoLockbottom.webm',
+        video: '/boxes-videos/Tuckbox/AutoLockbottom.webm',
         gallery: [
           '/subtype-autolock-new.jpg',
           '/subtype-ste-new.jpg',
