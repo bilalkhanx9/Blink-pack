@@ -42,7 +42,7 @@ export const packagingTypes = [
           'Protective dust flaps prevent debris entry',
           'Delivers an unforgettable customer unboxing moment'
         ],
-        material: 'Premium E-Flute Corrugated Board (White or Natural Kraft)',
+        material: 'Corrugated, E-Flute Board, Natural Kraft',
         lamination: 'Matte or glossy',
         addOns: 'Gold foil, spot UV, metallic print',
         customizations: ['Size', 'Print', 'Finish', 'Insert']
@@ -73,7 +73,7 @@ export const packagingTypes = [
           'Shipped completely flat for minimal storage footprint',
           '100% recyclable, biodegradable material'
         ],
-        material: 'Single-wall (E/B/C-Flute) or Double-wall Heavy Corrugated',
+        material: 'Corrugated, Single/Double-Wall Flute, Kraftboard',
         lamination: 'Matte or glossy',
         addOns: 'Gold foil, spot UV, metallic print',
         customizations: ['Size', 'Print', 'Finish', 'Insert']
@@ -110,7 +110,7 @@ export const packagingTypes = [
           'Premium unboxing feel — clean, structured design elevates the customer experience',
           'Eco-friendly option — reduced need for extra tape or adhesive materials'
         ],
-        material: 'Clay-Coated Heavy E-Flute / Kraftboard',
+        material: 'Corrugated, Heavy E-Flute, Clay-Coated Kraft',
         lamination: 'Matte or glossy',
         addOns: 'Gold foil, spot UV, metallic print',
         customizations: ['Size', 'Print', 'Finish', 'Insert']
@@ -160,7 +160,7 @@ export const packagingTypes = [
           'Lightweight & compact for space-saving shipping',
           '100% recyclable, sustainably sourced paperboard'
         ],
-        material: '16pt – 24pt Premium SBS Paperboard / Recycled Kraft',
+        material: 'Paperboard, 16pt–24pt SBS, Recycled Kraft',
         customizations: ['Size', 'Print', 'Finish', 'Insert']
       },
       {
@@ -189,7 +189,7 @@ export const packagingTypes = [
           'Crisp edge folding for retail shelves',
           'FSC-certified eco-friendly paper'
         ],
-        material: '16pt – 24pt Bleached Sulfate (SBS) / Kraft Paperboard',
+        material: 'Paperboard, Bleached Sulfate SBS, Kraft',
         customizations: ['Size', 'Print', 'Finish', 'Insert']
       },
       {
@@ -218,7 +218,7 @@ export const packagingTypes = [
           'Cuts packaging assembly time by up to 60%',
           'Reinforced bottom fold structure'
         ],
-        material: '18pt – 28pt Heavyweight SBS / Clay Coated Board',
+        material: 'Paperboard, Heavyweight SBS, Clay Coated Board',
         customizations: ['Size', 'Print', 'Finish', 'Insert']
       }
     ]
@@ -261,7 +261,7 @@ export const packagingTypes = [
           'Custom velvet, foam, or satin interior trays',
           'Hot foil stamping and soft-touch lamination'
         ],
-        material: '1200gsm – 1800gsm Solid Greyboard wrapped in Specialty Art Paper',
+        material: 'Rigid, Solid Greyboard, Specialty Art Paper',
         customizations: ['Size', 'Print', 'Finish', 'Insert']
       },
       {
@@ -284,7 +284,7 @@ export const packagingTypes = [
           'High structural rigidity that lasts forever',
           'Embossed logo presentation'
         ],
-        material: '1400gsm Premium Rigid Chipboard with Matte Art Wrap',
+        material: 'Rigid, Premium Chipboard, Matte Art Wrap',
         customizations: ['Size', 'Print', 'Finish', 'Insert']
       },
       {
@@ -307,7 +307,7 @@ export const packagingTypes = [
           'Pre-assembled ready to pack out of the box',
           'Premium inner lid printing available'
         ],
-        material: '1500gsm Heavy Greyboard with Soft-Touch Paper',
+        material: 'Rigid, Heavy Greyboard, Soft-Touch Paper',
         customizations: ['Size', 'Print', 'Finish', 'Insert']
       }
     ]
@@ -350,7 +350,7 @@ export const packagingTypes = [
           'Eliminates the cost of separate shopping bags',
           'Ships flat to save storage space'
         ],
-        material: '18pt – 24pt Coated SBS / White Paperboard',
+        material: 'Paperboard, Coated SBS, White Cardstock',
         customizations: ['Size', 'Print', 'Finish', 'Insert']
       },
       {
@@ -373,7 +373,7 @@ export const packagingTypes = [
           'Sturdy handle supports heavier contents',
           'Biodegradable window film options available'
         ],
-        material: '20pt Food-Safe Virgin Paperboard with Clear Window',
+        material: 'Paperboard, Plastic PET Window, Food-Safe SBS',
         customizations: ['Size', 'Print', 'Finish', 'Insert']
       },
       {
@@ -396,7 +396,7 @@ export const packagingTypes = [
           'Printed with non-toxic soy-based inks',
           'Compostable & biodegradable'
         ],
-        material: '100% Recycled Natural Brown Kraft Board',
+        material: 'Paperboard, 100% Recycled Natural Kraft',
         customizations: ['Size', 'Print', 'Finish', 'Insert']
       }
     ]
@@ -439,7 +439,7 @@ export const packagingTypes = [
           'Vivid full-color branding catches shopper attention',
           'Durable corrugated or thick SBS chipboard'
         ],
-        material: 'Heavy Fluted Corrugated or 24pt Coated SBS Board',
+        material: 'Corrugated, Heavy Fluted Board, Coated SBS',
         customizations: ['Size', 'Print', 'Finish', 'Insert']
       },
       {
@@ -463,7 +463,7 @@ export const packagingTypes = [
           'Clean organized presentation for customers',
           'Removable or fixed divider partitions'
         ],
-        material: 'Heavyweight Coated Paperboard with Sturdy Grid Inserts',
+        material: 'Paperboard, Coated Board, Grid Inserts',
         customizations: ['Size', 'Print', 'Finish', 'Insert']
       },
       {
@@ -486,7 +486,7 @@ export const packagingTypes = [
           'High-contrast gloss or matte printing',
           'Easy in-store setup with zero tools'
         ],
-        material: 'High-Density Corrugated E-Flute with Clay Coating',
+        material: 'Corrugated, High-Density E-Flute, Clay Coated',
         customizations: ['Size', 'Print', 'Finish', 'Insert']
       }
     ]
@@ -529,7 +529,7 @@ export const packagingTypes = [
           'Tear notches for easy consumer opening',
           'High barrier against oxygen and moisture'
         ],
-        material: 'Multi-Layer Foil Laminate / Matte MOPP / Kraft Foil',
+        material: 'Plastic, Multi-Layer Foil Laminate, Matte MOPP',
         customizations: ['Size', 'Print', 'Finish', 'Insert']
       },
       {
@@ -553,7 +553,7 @@ export const packagingTypes = [
           'Available with transparent product window',
           'Recyclable mono-material PE options'
         ],
-        material: 'Food-Grade Multi-Layer Barrier Foil / Eco Mono-PE',
+        material: 'Plastic, Food-Grade Barrier Foil, Eco Mono-PE',
         customizations: ['Size', 'Print', 'Finish', 'Insert']
       },
       {
@@ -576,7 +576,7 @@ export const packagingTypes = [
           'Heat-sealable top with tear notches',
           'Hang hole available for peg displays'
         ],
-        material: 'Glossy / Matte Barrier Laminate with Resealable Grip Zipper',
+        material: 'Plastic, Barrier Laminate, Resealable Grip Zipper',
         customizations: ['Size', 'Print', 'Finish', 'Insert']
       }
     ]

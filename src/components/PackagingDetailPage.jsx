@@ -176,7 +176,7 @@ export default function PackagingDetailPage({ packagingType, onNavigateHome, onS
                 {activeSubType.material && (
                   <div className="sidebar-info-block">
                     <span className="sidebar-spec-eyebrow">MATERIAL</span>
-                    <p className="sidebar-material-text">{activeSubType.material}</p>
+                    <p className="sidebar-spec-value">{activeSubType.material}</p>
                   </div>
                 )}
 
