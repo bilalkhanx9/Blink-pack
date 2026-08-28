@@ -66,7 +66,6 @@ export default function App() {
             onSelectType={handleSelectType}
           />
           <FreeDesignBanner />
-          <CallToActionBanner />
         </>
       ) : (
         /* Home Page View */
@@ -84,3 +83,5 @@ export default function App() {
     </div>
   );
 }
+
+

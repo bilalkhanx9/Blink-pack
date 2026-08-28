@@ -7,23 +7,12 @@ export default function PackagingDetailPage({ packagingType, onNavigateHome, onS
 
   const subTypes = packagingType.subTypes || [];
 
-  const getFirstImage = (st) => {
-    if (!st) return packagingType?.image;
-    if (st.gallery && st.gallery.length > 0) {
-      const first = st.gallery[0];
-      return typeof first === 'object' ? (first.image || first.src) : first;
-    }
-    return st.mainImage || st.thumb || packagingType?.image;
-  };
-
   const [activeSubTypeId, setActiveSubTypeId] = useState(subTypes[0]?.id || null);
-  const [activeGalleryImg, setActiveGalleryImg] = useState(getFirstImage(subTypes[0]));
 
   // When packagingType changes, reset to its first sub-type
   useEffect(() => {
     if (subTypes.length > 0) {
       setActiveSubTypeId(subTypes[0].id);
-      setActiveGalleryImg(getFirstImage(subTypes[0]));
     }
   }, [packagingType.id]);
 
@@ -31,7 +20,6 @@ export default function PackagingDetailPage({ packagingType, onNavigateHome, onS
 
   const handleSelectSubType = (st) => {
     setActiveSubTypeId(st.id);
-    setActiveGalleryImg(getFirstImage(st));
   };
 
   const otherTypes = packagingTypes.filter((item) => item.id !== packagingType.id);
@@ -184,13 +172,21 @@ export default function PackagingDetailPage({ packagingType, onNavigateHome, onS
                   </div>
                 )}
 
-                {/* 2. Lamination */}
+                {/* 2. Material */}
+                {activeSubType.material && (
+                  <div className="sidebar-info-block">
+                    <span className="sidebar-spec-eyebrow">MATERIAL</span>
+                    <p className="sidebar-material-text">{activeSubType.material}</p>
+                  </div>
+                )}
+
+                {/* 3. Lamination */}
                 <div className="sidebar-info-block">
                   <span className="sidebar-spec-eyebrow">LAMINATION</span>
                   <p className="sidebar-spec-value">{activeSubType.lamination || 'Matte or glossy'}</p>
                 </div>
 
-                {/* 3. Add-ons */}
+                {/* 4. Add-ons */}
                 <div className="sidebar-info-block">
                   <span className="sidebar-spec-eyebrow">ADD-ONS</span>
                   <p className="sidebar-spec-value">{activeSubType.addOns || 'Gold foil, spot UV, metallic print'}</p>
@@ -235,56 +231,27 @@ export default function PackagingDetailPage({ packagingType, onNavigateHome, onS
             {/* Right Main Panel: Large Image on Top & Rich Description Below */}
             <main className="subtype-detail-panel">
               
-              {/* Badge & Title & Description */}
-              <div className="subtype-header">
-                <span className="subtype-count-badge">
-                  Sub-type {activeSubType.number} of {subTypes.length}
-                </span>
-                <h2 className="subtype-display-title">{activeSubType.title}</h2>
-                <p className="subtype-display-desc">{activeSubType.description}</p>
-              </div>
-
-              {/* 1. Large Main Picture Showcase */}
+              {/* 1. Large Main Picture / Video Showcase */}
               <div className="subtype-main-img-box">
-                <img 
-                  src={activeGalleryImg || activeSubType.mainImage} 
-                  alt={activeSubType.title} 
-                  className="subtype-main-img"
-                />
+                {activeSubType.video ? (
+                  <video 
+                    key={activeSubType.video}
+                    src={activeSubType.video} 
+                    poster={activeSubType.mainImage || activeSubType.thumb}
+                    className="subtype-main-video"
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline
+                  />
+                ) : (
+                  <img 
+                    src={activeSubType.mainImage || activeSubType.thumb || packagingType.image} 
+                    alt={activeSubType.title} 
+                    className="subtype-main-img"
+                  />
+                )}
               </div>
-
-              {/* Material / Thumbnail Gallery Row Below Main Image */}
-              {activeSubType.gallery && activeSubType.gallery.length > 0 && (
-                <div className="subtype-gallery-container">
-                  <div className="gallery-material-label-box">
-                    <span className="gallery-material-label">Material</span>
-                  </div>
-                  <div className="subtype-gallery-row">
-                    {activeSubType.gallery.map((item, gIdx) => {
-                      const gImg = typeof item === 'object' ? (item.image || item.src) : item;
-                      const gName = typeof item === 'object' 
-                        ? item.name 
-                        : (typeof item === 'string' ? item.split('/').pop().replace(/\.[^/.]+$/, '') : `Style ${gIdx + 1}`);
-                      const isActive = activeGalleryImg === gImg;
-
-                      return (
-                        <button
-                          key={gIdx}
-                          type="button"
-                          className={`gallery-thumb-btn ${isActive ? 'active' : ''}`}
-                          onClick={() => setActiveGalleryImg(gImg)}
-                          title={gName ? `Select ${gName}` : `View image ${gIdx + 1}`}
-                        >
-                          <div className="gallery-thumb-img-wrapper">
-                            <img src={gImg} alt={gName || `${activeSubType.title} view ${gIdx + 1}`} />
-                          </div>
-                          {gName && <span className="gallery-thumb-label">{gName}</span>}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-              )}
 
               {/* 2. Product Description & Key Features Area Below Product */}
               <div className="subtype-content-body">

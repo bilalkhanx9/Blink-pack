@@ -22,7 +22,7 @@ html, body {
   font-family: 'Fraunces', Georgia, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 button, input, select, textarea, a, p, span, h1, h2, h3, h4, h5, h6, label, em, strong {

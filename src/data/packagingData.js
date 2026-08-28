@@ -142,6 +142,7 @@ export const packagingTypes = [
         description: 'Both top and bottom flaps tuck in the same direction from front to back, leaving a completely seamless, smooth front display face.',
         thumb: '/subtype-ste-thumb.png',
         mainImage: '/subtype-ste-main.png',
+        video: '/boxes-videos/StraightTuckEnd.webm',
         gallery: [
           '/subtype-ste-main.png',
           '/subtype-rte-thumb.png',
@@ -170,6 +171,7 @@ export const packagingTypes = [
         description: 'Top and bottom flaps tuck in opposite directions. The interlocking sheet layout makes RTE our most cost-effective and economical folding carton style.',
         thumb: '/subtype-rte-thumb.png',
         mainImage: '/subtype-rte-thumb.png',
+        video: '/boxes-videos/ReverseTuckEnd.webm',
         gallery: [
           '/subtype-rte-thumb.png',
           '/subtype-ste-main.png',
@@ -198,6 +200,7 @@ export const packagingTypes = [
         description: 'Features a pre-glued bottom that pops open and locks into place automatically upon unfolding, providing superior strength for heavier retail items.',
         thumb: '/subtype-autolock-thumb.png',
         mainImage: '/subtype-autolock-thumb.png',
+        video: '/boxes-videos/AutoLockbottom.webm',
         gallery: [
           '/subtype-autolock-thumb.png',
           '/subtype-ste-main.png',
