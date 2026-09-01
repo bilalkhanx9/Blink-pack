@@ -5,7 +5,8 @@
 .site-footer {
   width: 100%;
   background-color: #FAF7F2;
-  padding: clamp(64px, 8vh, 92px) 0 36px;
+  border-top: 1px solid rgba(43, 42, 36, 0.14);
+  padding: clamp(44px, 5.5vh, 60px) 0 22px;
   position: relative;
   font-family: 'Fraunces', Georgia, serif;
 }
@@ -24,7 +25,7 @@
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: clamp(32px, 4vw, 64px);
-  margin-bottom: clamp(48px, 6vh, 68px);
+  margin-bottom: clamp(32px, 4vh, 44px);
 }
 
 /* Brand Column */
@@ -128,7 +129,7 @@
    -------------------------------------------------------------------------- */
 .footer-bottom-bar {
   border-top: 1px solid rgba(43, 42, 36, 0.12);
-  padding-top: 30px;
+  padding-top: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
