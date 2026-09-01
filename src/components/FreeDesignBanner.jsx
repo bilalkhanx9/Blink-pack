@@ -1,7 +1,14 @@
 import React from 'react';
 import './FreeDesignBanner.css';
 
-export default function FreeDesignBanner() {
+export default function FreeDesignBanner({ onNavigateContact }) {
+  const handleCtaClick = (e) => {
+    if (onNavigateContact) {
+      e.preventDefault();
+      onNavigateContact();
+    }
+  };
+
   return (
     <section className="free-design-section" id="how-it-works">
       <div className="free-design-container">
@@ -25,7 +32,7 @@ export default function FreeDesignBanner() {
             goes into production. No design fee, no obligation until you approve a direction.
           </p>
           <div className="free-design-cta">
-            <a href="#contact" className="btn-free-concept">
+            <a href="#contact" className="btn-free-concept" onClick={handleCtaClick}>
               Start With a Free Concept
             </a>
           </div>

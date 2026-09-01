@@ -251,6 +251,7 @@ export const packagingTypes = [
         description: 'Lid snaps closed securely with concealed magnets, creating a luxurious magnetic snap that elevates premium product unboxing.',
         thumb: '/grid-fliptop.png',
         mainImage: '/grid-fliptop.png',
+        video: '/boxes-videos/Fliptopbox/Magnetic_Fliptop.webm',
         gallery: ['/grid-fliptop.png', '/grid-corrugate.png'],
         bestFor: [
           { icon: '💎', label: 'Jewelry & Watches' },
@@ -275,6 +276,7 @@ export const packagingTypes = [
         description: 'Features a soft woven satin or grosgrain ribbon pull tab for opening the hinged lid, adding a boutique couture feel.',
         thumb: '/grid-fliptop.png',
         mainImage: '/grid-fliptop.png',
+        video: '/boxes-videos/Fliptopbox/Ribbon_flip_top.webm',
         gallery: ['/grid-fliptop.png', '/grid-tuck.png'],
         bestFor: [
           { icon: '👗', label: 'Fashion & Silk Accessories' },
@@ -298,6 +300,7 @@ export const packagingTypes = [
         description: 'A classic rigid box where the lid stays permanently attached to the base along the back spine, opening like a book or presentation case.',
         thumb: '/grid-fliptop.png',
         mainImage: '/grid-fliptop.png',
+        video: '/boxes-videos/Fliptopbox/Hinged_Lid_Rigid_Box.mp4',
         gallery: ['/grid-fliptop.png', '/grid-gable.png'],
         bestFor: [
           { icon: '📚', label: 'Collector Editions & Games' },
@@ -340,6 +343,7 @@ export const packagingTypes = [
         description: 'The iconic peaked gable roof box with an integrated die-cut handle on top, combining carrying bag and box in one.',
         thumb: '/grid-gable.png',
         mainImage: '/grid-gable.png',
+        video: '/boxes-videos/Gablebox/Standard_gable_box.webm',
         gallery: ['/grid-gable.png', '/grid-corrugate.png'],
         bestFor: [
           { icon: '🎂', label: 'Bakery & Pastry Takeaway' },
@@ -358,12 +362,13 @@ export const packagingTypes = [
       },
       {
         id: 'window-gable',
-        number: 1,
+        number: 2,
         title: 'Window Gable Box',
         shortTitle: '2. Window Gable Box',
         description: 'Features a crystal-clear transparent PET/PLA window on the front face to display the tempting product inside.',
         thumb: '/grid-gable.png',
         mainImage: '/grid-gable.png',
+        video: '/boxes-videos/Gablebox/Window_gable_box.mp4',
         gallery: ['/grid-gable.png', '/grid-tuck.png'],
         bestFor: [
           { icon: '🧁', label: 'Cupcakes & Decorated Cakes' },
@@ -387,6 +392,7 @@ export const packagingTypes = [
         description: 'Made from unbleached natural eco-friendly kraft paperboard, offering an earthy, rustic, organic farm-to-table aesthetic.',
         thumb: '/grid-gable.png',
         mainImage: '/grid-gable.png',
+        video: '/boxes-videos/Gablebox/Kraft_gable_box.webm',
         gallery: ['/grid-gable.png', '/grid-display.png'],
         bestFor: [
           { icon: '🌿', label: 'Organic & Farm Goods' },
@@ -429,6 +435,7 @@ export const packagingTypes = [
         description: 'Compact point-of-sale display unit designed to sit directly on checkout counters to drive high-margin impulse sales.',
         thumb: '/grid-display.png',
         mainImage: '/grid-display.png',
+        video: '/boxes-videos/Displaybox/Counter_display_box.webm',
         gallery: ['/grid-display.png', '/grid-corrugate.png'],
         bestFor: [
           { icon: '🏬', label: 'Checkout Counter Items' },
@@ -453,6 +460,7 @@ export const packagingTypes = [
         description: 'Features custom internal cardboard grid dividers and separate slots to keep multiple bottles, tubes, or jars upright and neatly organized.',
         thumb: '/grid-display.png',
         mainImage: '/grid-display.png',
+        video: '/boxes-videos/Displaybox/Divider_Box.webm',
         gallery: ['/grid-display.png', '/grid-tuck.png'],
         bestFor: [
           { icon: '🧪', label: 'Vape Liquids & Dropper Bottles' },
@@ -477,6 +485,7 @@ export const packagingTypes = [
         description: 'Includes an upright promotional billboard header card that rises above the products, displaying key branding, pricing, and promotional messaging.',
         thumb: '/grid-display.png',
         mainImage: '/grid-display.png',
+        video: '/boxes-videos/Displaybox/Header_display_box.mp4',
         gallery: ['/grid-display.png', '/grid-fliptop.png'],
         bestFor: [
           { icon: '📢', label: 'Promotional Product Launches' },
@@ -519,6 +528,7 @@ export const packagingTypes = [
         description: 'A simple flat bag with 3-side sealed edges, ideal for single-use samples, sheet masks, powders, and compact on-the-go items.',
         thumb: '/grid-bags.png',
         mainImage: '/grid-bags.png',
+        video: '/boxes-videos/Bags/Flat_pouch.webm',
         gallery: ['/grid-bags.png', '/grid-corrugate.png'],
         bestFor: [
           { icon: '🧴', label: 'Single-Use Cosmetics & Masks' },
@@ -543,6 +553,7 @@ export const packagingTypes = [
         description: 'Engineered with a bottom gusset that expands to allow the bag to stand upright independently on retail shelves for maximum brand visibility.',
         thumb: '/grid-bags.png',
         mainImage: '/grid-bags.png',
+        video: '/boxes-videos/Bags/Standup_pouch.webm',
         gallery: ['/grid-bags.png', '/grid-tuck.png'],
         bestFor: [
           { icon: '☕', label: 'Coffee Beans & Loose Leaf Tea' },
@@ -567,6 +578,7 @@ export const packagingTypes = [
         description: 'Includes a heavy-duty resealable press-to-close zip lock that keeps powders, snacks, and dried goods fresh after repeated openings.',
         thumb: '/grid-bags.png',
         mainImage: '/grid-bags.png',
+        video: '/boxes-videos/Bags/Zipper_pouch.webm',
         gallery: ['/grid-bags.png', '/grid-fliptop.png'],
         bestFor: [
           { icon: '🍪', label: 'Resealable Snack Foods' },

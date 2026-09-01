@@ -1,7 +1,14 @@
 import React from 'react';
 import './CallToActionBanner.css';
 
-export default function CallToActionBanner() {
+export default function CallToActionBanner({ onNavigateContact }) {
+  const handleCtaClick = (e) => {
+    if (onNavigateContact) {
+      e.preventDefault();
+      onNavigateContact();
+    }
+  };
+
   return (
     <section className="cta-banner-section" id="contact">
       <div className="cta-banner-container reveal-up">
@@ -19,10 +26,10 @@ export default function CallToActionBanner() {
 
         {/* CTA Buttons */}
         <div className="cta-banner-actions">
-          <a href="#quote" className="btn-cta-primary">
+          <a href="#contact" className="btn-cta-primary" onClick={handleCtaClick}>
             Request a Quotation
           </a>
-          <a href="#samples" className="btn-cta-secondary">
+          <a href="#contact" className="btn-cta-secondary" onClick={handleCtaClick}>
             Enquire About Samples
           </a>
         </div>

@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 
-export default function Navbar({ onNavigateHome }) {
+export default function Navbar({ onNavigateHome, onNavigateContact }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleLogoClick = (e) => {
     e.preventDefault();
     if (onNavigateHome) onNavigateHome();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleContactClick = (e) => {
+    e.preventDefault();
+    if (onNavigateContact) onNavigateContact();
+    setIsMobileMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -65,7 +72,12 @@ export default function Navbar({ onNavigateHome }) {
               href="#explore" 
               className="nav-link"
               onClick={(e) => {
-                if (onNavigateHome) onNavigateHome();
+                if (onNavigateHome) {
+                  onNavigateHome();
+                  setTimeout(() => {
+                    document.getElementById('explore')?.scrollIntoView({ behavior: 'smooth' });
+                  }, 100);
+                }
               }}
             >
               Explore
@@ -101,10 +113,11 @@ export default function Navbar({ onNavigateHome }) {
           </nav>
 
           <div className="nav-actions">
-            <a href="#enquire" className="btn-enquire">
-              Enquire
-            </a>
-            <a href="#contact" className="btn-contact">
+            <a 
+              href="#contact" 
+              className="btn-contact-primary"
+              onClick={handleContactClick}
+            >
               Contact Us
             </a>
           </div>
@@ -130,21 +143,45 @@ export default function Navbar({ onNavigateHome }) {
             <a 
               href="#explore" 
               className="mobile-nav-link"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                if (onNavigateHome) {
+                  onNavigateHome();
+                  setTimeout(() => {
+                    document.getElementById('explore')?.scrollIntoView({ behavior: 'smooth' });
+                  }, 100);
+                }
+              }}
             >
               Explore
             </a>
             <a 
               href="#range" 
               className="mobile-nav-link"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                if (onNavigateHome) {
+                  onNavigateHome();
+                  setTimeout(() => {
+                    document.getElementById('range')?.scrollIntoView({ behavior: 'smooth' });
+                  }, 100);
+                }
+              }}
             >
               Range
             </a>
             <a 
               href="#process" 
               className="mobile-nav-link"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                if (onNavigateHome) {
+                  onNavigateHome();
+                  setTimeout(() => {
+                    document.getElementById('process')?.scrollIntoView({ behavior: 'smooth' });
+                  }, 100);
+                }
+              }}
             >
               Process
             </a>
@@ -152,16 +189,9 @@ export default function Navbar({ onNavigateHome }) {
 
           <div className="mobile-nav-actions">
             <a 
-              href="#enquire" 
-              className="btn-enquire full-width"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Enquire
-            </a>
-            <a 
               href="#contact" 
-              className="btn-contact full-width"
-              onClick={() => setIsMobileMenuOpen(false)}
+              className="btn-contact-primary full-width"
+              onClick={handleContactClick}
             >
               Contact Us
             </a>

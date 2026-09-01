@@ -1,58 +1,85 @@
 /* ==========================================================================
-   Hero Section Styling - Blink Custom Packaging
+   Hero Section Styling - Blink Custom Packaging (Cinematic Video on Top + Copy Below)
    ========================================================================== */
 
 .hero-section {
   width: 100%;
   background-color: #FAF7F2;
-  padding: clamp(24px, 4vh, 44px) 0 clamp(12px, 2vh, 20px);
   position: relative;
   overflow: hidden;
-  display: flex;
-  align-items: center;
+  padding: clamp(24px, 3.5vh, 44px) 0 clamp(44px, 5.5vh, 68px);
 }
 
 .hero-container {
   max-width: 1240px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 64px;
-}
-
-
-/* --------------------------------------------------------------------------
-   Main Grid Layout (Left: Content, Right: Image)
-   -------------------------------------------------------------------------- */
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.25fr;
-  gap: clamp(20px, 3.5vw, 48px);
+  padding: 0 48px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-/* Left Column */
-.hero-content {
-  max-width: 540px;
+/* --------------------------------------------------------------------------
+   1. Cinematic Panoramic Video Showcase (Top)
+   -------------------------------------------------------------------------- */
+.hero-video-showcase {
+  width: 100%;
+  max-width: 980px;
+  position: relative;
+  margin-bottom: clamp(24px, 3.5vh, 38px);
+}
+
+.hero-video-frame {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  max-height: 360px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #FAF7F2;
+  border: 1px solid rgba(43, 42, 36, 0.08);
+  box-shadow: 0 12px 36px rgba(43, 42, 36, 0.07), 0 2px 8px rgba(43, 42, 36, 0.03);
+  position: relative;
+}
+
+.hero-showcase-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   2. Centered Header Copy Below Video
+   -------------------------------------------------------------------------- */
+.hero-header-content {
+  max-width: 860px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0;
 }
 
 .hero-eyebrow {
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 11px;
+  font-size: 11.5px;
   font-weight: 700;
-  color: #8B8574;
-  letter-spacing: 0.18em;
+  color: #586B4F;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  margin-bottom: clamp(8px, 1.4vh, 14px);
+  margin-bottom: 14px;
 }
 
 .hero-title {
   font-family: 'Fraunces', Georgia, serif;
-  font-size: clamp(36px, 4.2vw, 56px);
+  font-size: clamp(34px, 4.4vw, 54px);
   font-weight: 600;
-  line-height: 1.12;
-  color: #2B2A24;
+  line-height: 1.15;
+  color: #1E232A;
   letter-spacing: -0.015em;
-  margin-bottom: clamp(12px, 1.8vh, 18px);
+  margin-bottom: 24px;
 }
 
 .italic-craft {
@@ -62,18 +89,13 @@
   color: #3F5D3D;
 }
 
-.hero-description {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: clamp(14px, 1.1vw, 15.5px);
-  line-height: 1.6;
-  color: #726F60;
-  margin-bottom: clamp(20px, 2.8vh, 30px);
-}
-
-/* CTA Buttons Group */
+/* --------------------------------------------------------------------------
+   CTA Buttons Group
+   -------------------------------------------------------------------------- */
 .hero-cta-group {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 14px;
   flex-wrap: wrap;
 }
@@ -87,7 +109,7 @@
   font-family: 'Fraunces', Georgia, serif;
   font-size: 14px;
   font-weight: 600;
-  padding: 12.5px 26px;
+  padding: 13px 28px;
   border-radius: 6px;
   text-decoration: none;
   transition: all 0.2s ease;
@@ -113,20 +135,21 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: transparent;
+  background-color: #FFFFFF;
   color: #3F5D3D;
   font-family: 'Fraunces', Georgia, serif;
   font-size: 14px;
   font-weight: 600;
-  padding: 11.5px 22px;
+  padding: 12px 24px;
   border-radius: 6px;
-  border: 1.5px solid #7C9B6E;
+  border: 1.5px solid #8FA883;
   text-decoration: none;
   transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(43, 42, 36, 0.04);
 }
 
 .btn-hero-secondary:hover {
-  background-color: #E7EDDD;
+  background-color: #F2F6ED;
   border-color: #3F5D3D;
   color: #324B31;
   transform: translateY(-1px);
@@ -139,75 +162,40 @@
 }
 
 /* --------------------------------------------------------------------------
-   Right Column (Hero Visual Mockup - Seamlessly Integrated)
-   -------------------------------------------------------------------------- */
-.hero-visual-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.hero-image {
-  width: 100%;
-  max-width: 760px;
-  height: auto;
-  display: block;
-  object-fit: contain;
-  border: none;
-  outline: none;
-  box-shadow: none;
-  background: transparent;
-  pointer-events: none;
-  user-select: none;
-}
-
-/* --------------------------------------------------------------------------
    Responsive Media Queries
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 36px;
-    text-align: center;
+  .hero-container {
+    padding: 0 32px;
   }
 
-  .hero-content {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
-  .hero-cta-group {
-    justify-content: center;
-  }
-
-  .hero-image {
-    max-width: 540px;
-    margin: 0 auto;
+  .hero-title {
+    font-size: clamp(30px, 4vw, 42px);
   }
 }
 
 @media (max-width: 768px) {
   .hero-section {
-    padding: 20px 0 48px;
+    padding: 20px 0 36px;
   }
 
   .hero-container {
     padding: 0 20px;
   }
 
-  .hero-title {
-    font-size: 32px;
+  .hero-video-showcase {
+    margin-bottom: 24px;
   }
 
-  .hero-description {
-    font-size: 14.5px;
+  .hero-title {
+    font-size: 28px;
   }
 
   .hero-cta-group {
     flex-direction: column;
     align-items: stretch;
+    width: 100%;
+    max-width: 300px;
   }
 
   .btn-hero-primary,
@@ -216,7 +204,7 @@
     width: 100%;
   }
 
-  .hero-image {
-    max-width: 100%;
+  .hero-video-frame {
+    border-radius: 10px;
   }
 }

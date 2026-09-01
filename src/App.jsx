@@ -9,12 +9,14 @@ import StandardSection from './components/StandardSection';
 import CallToActionBanner from './components/CallToActionBanner';
 import Footer from './components/Footer';
 import PackagingDetailPage from './components/PackagingDetailPage';
+import ContactPage from './components/ContactPage';
+import TheRangeSection from './components/TheRangeSection';
 import { packagingTypes, getPackagingTypeById } from './data/packagingData';
 import { useScrollReveal } from './hooks/useScrollReveal';
 import './index.css';
 
 export default function App() {
-  // Navigation state: null for home, or box id (e.g. 'tuck', 'corrugated', etc.)
+  // Navigation state: null for home, 'contact' for contact page, or box id (e.g. 'tuck', 'corrugated')
   const [selectedTypeId, setSelectedTypeId] = useState(null);
 
   // Initialize smooth scroll reveal animations
@@ -28,6 +30,9 @@ export default function App() {
         const id = hash.replace('#/packaging/', '');
         setSelectedTypeId(id);
         window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (hash === '#/contact' || hash === '#contact') {
+        setSelectedTypeId('contact');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       } else if (!hash || hash === '#' || hash === '#home') {
         setSelectedTypeId(null);
       }
@@ -40,7 +45,11 @@ export default function App() {
 
   const handleSelectType = (id) => {
     setSelectedTypeId(id);
-    window.location.hash = `#/packaging/${id}`;
+    if (id === 'contact') {
+      window.location.hash = '#/contact';
+    } else {
+      window.location.hash = `#/packaging/${id}`;
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -50,36 +59,59 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const currentPackagingType = selectedTypeId ? getPackagingTypeById(selectedTypeId) : null;
+  const handleNavigateContact = () => {
+    handleSelectType('contact');
+  };
+
+  const isContactPage = selectedTypeId === 'contact';
+  const currentPackagingType = (!isContactPage && selectedTypeId) ? getPackagingTypeById(selectedTypeId) : null;
 
   return (
     <div className="app-layout">
       <TopBanner />
-      <Navbar onNavigateHome={handleNavigateHome} />
+      <Navbar 
+        onNavigateHome={handleNavigateHome} 
+        onNavigateContact={handleNavigateContact}
+      />
 
-      {selectedTypeId && currentPackagingType ? (
+      {isContactPage ? (
+        /* Dedicated Contact Us Page */
+        <ContactPage 
+          onNavigateHome={handleNavigateHome}
+          onSelectType={handleSelectType}
+        />
+      ) : selectedTypeId && currentPackagingType ? (
         /* Single Packaging Type Detail View */
         <>
           <PackagingDetailPage 
             packagingType={currentPackagingType} 
             onNavigateHome={handleNavigateHome}
             onSelectType={handleSelectType}
+            onNavigateContact={handleNavigateContact}
           />
-          <FreeDesignBanner />
+          <FreeDesignBanner onNavigateContact={handleNavigateContact} />
         </>
       ) : (
         /* Home Page View */
         <>
           <Hero />
-          <FreeDesignBanner />
           <PackagingRange onSelectType={handleSelectType} />
+          <TheRangeSection 
+            onNavigateContact={handleNavigateContact} 
+            onSelectType={handleSelectType}
+          />
+          <FreeDesignBanner onNavigateContact={handleNavigateContact} />
           <ProcessSection />
           <StandardSection />
-          <CallToActionBanner />
+          <CallToActionBanner onNavigateContact={handleNavigateContact} />
         </>
       )}
 
-      <Footer onNavigateHome={handleNavigateHome} onSelectType={handleSelectType} />
+      <Footer 
+        onNavigateHome={handleNavigateHome} 
+        onSelectType={handleSelectType} 
+        onNavigateContact={handleNavigateContact}
+      />
     </div>
   );
 }

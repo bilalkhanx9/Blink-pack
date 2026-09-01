@@ -1,0 +1,203 @@
+/* ==========================================================================
+   The Range Section Styling - Blink Custom Packaging (Exact Table Grid Match)
+   ========================================================================== */
+
+.the-range-section {
+  width: 100%;
+  background-color: #FAF7F2;
+  padding: clamp(56px, 8vh, 88px) 0 clamp(64px, 9vh, 96px);
+  position: relative;
+  border-top: 1px solid rgba(43, 42, 36, 0.08);
+}
+
+.the-range-container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+/* --------------------------------------------------------------------------
+   Section Header (Left-aligned matching The Process)
+   -------------------------------------------------------------------------- */
+.the-range-header {
+  text-align: left;
+  max-width: 720px;
+  margin: 0 0 clamp(38px, 5.5vh, 56px) 0;
+}
+
+.the-range-eyebrow-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.the-range-eyebrow-line {
+  width: 22px;
+  height: 1.2px;
+  background-color: rgba(43, 42, 36, 0.28);
+  display: inline-block;
+}
+
+.the-range-eyebrow {
+  display: inline-block;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #586B4F;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.the-range-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(28px, 3.4vw, 42px);
+  font-weight: 600;
+  line-height: 1.18;
+  color: #1E232A;
+  letter-spacing: -0.015em;
+  margin-bottom: 12px;
+}
+
+.the-range-subtitle {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(14px, 1.1vw, 15.5px);
+  line-height: 1.6;
+  color: #6C685C;
+  max-width: 620px;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Table Grid (Clean 1px Borders, Seamless Background, Not Clickable)
+   -------------------------------------------------------------------------- */
+.the-range-table-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(43, 42, 36, 0.12);
+  border-left: 1px solid rgba(43, 42, 36, 0.12);
+  background-color: transparent;
+  user-select: text;
+  cursor: default;
+}
+
+.the-range-cell {
+  border-right: 1px solid rgba(43, 42, 36, 0.12);
+  border-bottom: 1px solid rgba(43, 42, 36, 0.12);
+  padding: clamp(28px, 3.2vw, 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  cursor: default;
+  min-height: 220px;
+  transition: none;
+}
+
+.the-range-cell:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.the-range-cell-full {
+  grid-column: 1 / -1;
+}
+
+.range-cell-content {
+  margin-bottom: 32px;
+}
+
+.range-cell-category {
+  display: block;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #586B4F;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.range-cell-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1E232A;
+  line-height: 1.25;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.range-cell-desc {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #6C685C;
+  margin: 0;
+}
+
+/* Bottom Spec Row */
+.range-cell-spec {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: none;
+  font-family: 'Fraunces', Georgia, serif;
+}
+
+.range-spec-label {
+  font-size: 12.5px;
+  color: #8C8776;
+  font-weight: 500;
+}
+
+.range-spec-value {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1E232A;
+  text-align: right;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Media Queries
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .the-range-container {
+    padding: 0 40px;
+  }
+
+  .the-range-table-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .the-range-cell-full {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .the-range-section {
+    padding: 44px 0 64px;
+  }
+
+  .the-range-container {
+    padding: 0 20px;
+  }
+
+  .the-range-table-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .the-range-cell {
+    padding: 24px 20px;
+    min-height: auto;
+  }
+
+  .range-cell-content {
+    margin-bottom: 20px;
+  }
+}

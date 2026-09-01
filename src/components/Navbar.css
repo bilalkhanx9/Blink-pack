@@ -117,8 +117,8 @@
   gap: 12px;
 }
 
-/* Enquire Button (Solid Green) */
-.btn-enquire {
+/* Contact Us Button (Solid Green Primary) */
+.btn-contact-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -134,41 +134,13 @@
   box-shadow: 0 2px 8px rgba(63, 93, 61, 0.2);
 }
 
-.btn-enquire:hover {
+.btn-contact-primary:hover {
   background-color: var(--nav-green-hover);
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(63, 93, 61, 0.28);
 }
 
-.btn-enquire:active {
-  transform: translateY(0);
-}
-
-/* Contact Us Button (Outlined Green) */
-.btn-contact {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  color: var(--nav-green);
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 13.5px;
-  font-weight: 600;
-  padding: 9px 22px;
-  border-radius: 6px;
-  border: 1.5px solid var(--nav-green-light);
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.btn-contact:hover {
-  background-color: var(--nav-green-pale);
-  border-color: var(--nav-green);
-  color: var(--nav-green-hover);
-  transform: translateY(-1px);
-}
-
-.btn-contact:active {
+.btn-contact-primary:active {
   transform: translateY(0);
 }
 

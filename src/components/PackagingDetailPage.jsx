@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './PackagingDetailPage.css';
 import { packagingTypes } from '../data/packagingData';
 
-export default function PackagingDetailPage({ packagingType, onNavigateHome, onSelectType }) {
+export default function PackagingDetailPage({ packagingType, onNavigateHome, onSelectType, onNavigateContact }) {
   if (!packagingType) return null;
 
   const subTypes = packagingType.subTypes || [];
@@ -20,6 +20,13 @@ export default function PackagingDetailPage({ packagingType, onNavigateHome, onS
 
   const handleSelectSubType = (st) => {
     setActiveSubTypeId(st.id);
+  };
+
+  const handleContactClick = (e) => {
+    if (onNavigateContact) {
+      e.preventDefault();
+      onNavigateContact();
+    }
   };
 
   const otherTypes = packagingTypes.filter((item) => item.id !== packagingType.id);
@@ -220,7 +227,7 @@ export default function PackagingDetailPage({ packagingType, onNavigateHome, onS
 
                 {/* 4. CTA Action */}
                 <div className="sidebar-action-cta">
-                  <a href="#contact" className="btn-subtype-enquire">
+                  <a href="#contact" className="btn-subtype-enquire" onClick={handleContactClick}>
                     Request Free Concept
                   </a>
                 </div>

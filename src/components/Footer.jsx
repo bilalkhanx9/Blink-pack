@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css';
 
-export default function Footer({ onNavigateHome, onSelectType }) {
+export default function Footer({ onNavigateHome, onSelectType, onNavigateContact }) {
   const handleLogoClick = (e) => {
     e.preventDefault();
     if (onNavigateHome) {
@@ -14,6 +14,13 @@ export default function Footer({ onNavigateHome, onSelectType }) {
   const handleLinkClick = (typeId) => {
     if (onSelectType) {
       onSelectType(typeId);
+    }
+  };
+
+  const handleContactClick = (e) => {
+    e.preventDefault();
+    if (onNavigateContact) {
+      onNavigateContact();
     }
   };
 
@@ -114,13 +121,13 @@ export default function Footer({ onNavigateHome, onSelectType }) {
             <h4 className="footer-col-title">ENQUIRE</h4>
             <ul className="footer-links-list">
               <li>
-                <a href="#contact">Contact Us</a>
+                <a href="#contact" onClick={handleContactClick}>Contact Us</a>
               </li>
               <li>
-                <a href="#contact">Request a Quotation</a>
+                <a href="#contact" onClick={handleContactClick}>Request a Quotation</a>
               </li>
               <li>
-                <a href="#contact">Request a Sample</a>
+                <a href="#contact" onClick={handleContactClick}>Request a Sample</a>
               </li>
             </ul>
           </div>

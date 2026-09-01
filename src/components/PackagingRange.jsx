@@ -48,12 +48,12 @@ const packagingItems = [
 
 export default function PackagingRange({ onSelectType }) {
   return (
-    <section className="range-section" id="range">
+    <section className="range-section" id="explore">
       <div className="range-container">
         
         {/* Section Header */}
         <div className="range-header reveal-up">
-          <span className="range-eyebrow">OUR PACKAGING RANGE</span>
+          <span className="range-eyebrow">OUR PACKAGING TYPES</span>
           <h2 className="range-title">Made for your product. Made to stand out.</h2>
         </div>
 

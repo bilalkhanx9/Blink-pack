@@ -43,12 +43,6 @@ export default function AboutBanner() {
             With a perfect balance of form and function, we craft packaging that protects 
             your product, elevates your brand, and leaves a lasting impression.
           </p>
-          <div className="about-action">
-            <a href="#contact" className="btn-about-cta">
-              <span>Learn More About Us</span>
-              <span className="btn-arrow">→</span>
-            </a>
-          </div>
         </div>
 
         {/* Complete Botanical Leaf Branch Illustration */}
